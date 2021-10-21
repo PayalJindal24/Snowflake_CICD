@@ -1,5 +1,5 @@
 use database demo_db;
-use schema dev;
+use schema schemachange;
 create table fidelity_test_users (
   name varchar (100),  -- variable string column
   preferences string, -- column used to store JSON type of data
