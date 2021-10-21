@@ -1,4 +1,4 @@
-name: snowflake-devops-demo
+name: blank
 
 # Controls when the action will run. 
 on:
@@ -26,12 +26,12 @@ jobs:
           python-version: 3.8.x
       - name: Run schemachange
         env:
-          SF_ACCOUNT: ${{ secrets.SF_ACCOUNT }}
-          SF_USERNAME: ${{ secrets.SF_USERNAME }}
-          SF_ROLE: ${{ secrets.SF_ROLE }}
-          SF_WAREHOUSE: ${{ secrets.SF_WAREHOUSE }}
-          SF_DATABASE: ${{ secrets.SF_DATABASE }}
-          SNOWFLAKE_PASSWORD: ${{ secrets.SF_PASSWORD }}
+          SF_ACCOUNT: ${{ secrets.sf_account }}
+          SF_USERNAME: ${{ secrets.sf_username }}
+          SF_ROLE: ${{ secrets.sf_role }}
+          SF_WAREHOUSE: ${{ secrets.sf_warehouse }}
+          SF_DATABASE: ${{ secrets.sf_database }}
+          SNOWFLAKE_PASSWORD: ${{ secrets.sf_password }}
           run: |
           echo "GITHUB_WORKSPACE: $GITHUB_WORKSPACE"
             python --version
