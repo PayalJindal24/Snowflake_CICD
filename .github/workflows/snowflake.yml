@@ -37,15 +37,16 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run snowflake scripts
         env: 
-          SF_ACCOUNT: ${{ secrets.sf_account }}
-          SF_USERNAME: ${{secrets.sf_username}}
-          SNOWFLAKE_PASSWORD: ${{secrets.sf_password}}
-          SF_ROLE: ${{secrets.sf_role}}
-          SF_URL: ${{secrets.sf_url}}
-          SF_DATABASE: ${{secrets.sf_database}}
-          SF_WAREHOUSE: ${{secrets.sf_warehouse}}
+          SF_ACCOUNT: ${{ secrets.SF_ACCOUNT }}
+          SF_USERNAME: ${{secrets.SF_USERNAME}}
+          SNOWFLAKE_PASSWORD: ${{secrets.SF_PASSWORD}}
+          SF_ROLE: ${{secrets.SF_ROLE}}
+          SF_URL: ${{secrets.SF_URL}}
+          SF_DATABASE: ${{secrets.SF_DATABASE}}
+          SF_WAREHOUSE: ${{secrets.SF_WAREHOUSE}}
         run: |
-          echo " Github_Workspace: $GITHUB_WORKSPACE"
+          echo "Github_Workspace: $GITHUB_WORKSPACE"
+          echo "SF_ACCOUNT: $SF_ACCOUNT"
           echo " schemachange -f " +${GITHUB_WORKSPACE}+ "/dbscripts"
           python --version
           echo "step 1 - Installing Snowflake Scripts"
