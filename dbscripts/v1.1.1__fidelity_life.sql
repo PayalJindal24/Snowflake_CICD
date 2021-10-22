@@ -1,4 +1,4 @@
-use database demo_db;
+ use database demo_db;
 use schema schemachange;
 create table fidelity_test_users (
   name varchar (100),  -- variable string column
