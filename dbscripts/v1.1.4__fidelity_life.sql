@@ -4,5 +4,5 @@ CREATE TABLE HELLO_WORLD_test
 (
    FIRST_NAME VARCHAR
   ,LAST_NAME VARCHAR,
-  roll_no number
+ roll_no number
 );

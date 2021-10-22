@@ -49,11 +49,11 @@ jobs:
           pip install schemachange --upgrade
           echo "Step 2 - Running snowflake scripts"
           echo "Hello Isha"
-          echo "Account: $SF_ACCOUNT"
+          echo "Account: ${{secrets.SF_ACCOUNT}}"
           echo "Username: $SF_USERNAME"
           echo "Role: $SF_ROLE"
           echo "URL: $SF_URL"
           echo " Dtabase: $SF_DATABASE"
           echo "Warehouse: $SF_WAREHOUSE"
           echo "workspace: $GITHUB_WORKSPACE"
-          schemachange -f /home/runner/work/Snowflake_CICD/Snowflake_CICD/dbscripts -a $SF_ACCOUNT -u $SF_USERNAME -r $SF_ROLE -w $SF_WAREHOUSE -d $SF_DATABASE -c $SF_DATABASE.SCHEMACHANGE.CHANGE_HISTORY --create-change-history-table
+          schemachange -f /home/runner/work/Snowflake_CICD/Snowflake_CICD/dbscripts/ -a $SF_ACCOUNT -u $SF_USERNAME -r $SF_ROLE -w $SF_WAREHOUSE -d $SF_DATABASE -c $SF_DATABASE.SCHEMACHANGE.CHANGE_HISTORY --create-change-history-table
