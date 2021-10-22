@@ -47,10 +47,8 @@ jobs:
         run: |
           echo "Github_Workspace: $GITHUB_WORKSPACE"
           echo "SF_ACCOUNT: $SF_ACCOUNT"
-          echo " schemachange -f " +${GITHUB_WORKSPACE}+ "/dbscripts"
           python --version
           echo "step 1 - Installing Snowflake Scripts"
           pip install schemachange --upgrade
-          echo " Step 2 - Running snowflake scripts"
-          echo "Step 2: Running schemachange"
-          schemachange -f ${GITHUB_WORKSPACE}/dbscripts -a $SF_ACCOUNT -u $SF_USERNAME -r $SF_ROLE -w $SF_WAREHOUSE -d $SF_DATABASE -c $SF_DATABASE.SCHEMACHANGE.CHANGE_HISTORY --create-change-history-table
+          echo "Step 2 - Running snowflake scripts"
+          schemachange -f $GITHUB_WORKSPACE/dbscripts -a $SF_ACCOUNT -u $SF_USERNAME -r $SF_ROLE -w $SF_WAREHOUSE -d $SF_DATABASE -c $SF_DATABASE.SCHEMACHANGE.CHANGE_HISTORY --create-change-history-table
