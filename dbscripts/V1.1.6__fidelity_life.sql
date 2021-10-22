@@ -1,10 +1,5 @@
 use warehouse COMPUTE_WH;
 
 use database SNOWFLAKE_GITHUB;
-CREATE SCHEMA DEV;
-CREATE TABLE HELLO_WORLD_test
-(
-   FIRST_NAME VARCHAR
-  ,LAST_NAME VARCHAR,
-	roll_no number
-);
+use SCHEMA DEV;
+insert into table hello_world_test values('payal','jindal',1);
