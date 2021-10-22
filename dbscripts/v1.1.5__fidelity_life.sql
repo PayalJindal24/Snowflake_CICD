@@ -1,4 +1,5 @@
 use warehouse COMPUTE_WH;
+
 use database SNOWFLAKE_GITHUB;
 CREATE SCHEMA DEV;
 CREATE TABLE HELLO_WORLD_test
