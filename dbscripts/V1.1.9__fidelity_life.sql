@@ -1,1 +1,1 @@
-alter table snowflake_github.dev.hello_world add column id int;
+alter table snowflake_github.dev.hello_world add id int;
