@@ -1,0 +1,1 @@
+create or replace TABLE  snowflake_github.dev.hello_world_TEST_2(id int,name varchar(20));
