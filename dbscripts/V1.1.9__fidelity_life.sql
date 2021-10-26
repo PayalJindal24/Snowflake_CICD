@@ -1,1 +1,1 @@
-alter table snowflake_github.dev.hello_world add id int;
+create or replace table snowflake_github.dev.hello_world_2 (id int,name varchar(10));
